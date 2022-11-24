@@ -8,8 +8,8 @@ interface Config {
 export function getConfig(env: ENV_NAME): Config {
     if (env == "production")
         return {
-            LOCK_ADDRESS: "lock production address",
-            USDT_ADDRESS: "usdt production address"
+            LOCK_ADDRESS: "",
+            USDT_ADDRESS: ""
         }
     else if (env == "staging") 
         return {
@@ -23,7 +23,7 @@ export function getConfig(env: ENV_NAME): Config {
         }
     else 
         return {
-            LOCK_ADDRESS: "lock local address",
-            USDT_ADDRESS: "usdt local address"
+            LOCK_ADDRESS: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+            USDT_ADDRESS: "0x814d58129C2724A53BA637cc4040Bb36442A30D0"
         }
 }
