@@ -1,5 +1,5 @@
 import {ethers, upgrades} from "hardhat"
-import {getConfig} from "./config";
+import {getConfig} from "../config";
 
 async function main() {
     // Hardhat always runs the compile task when running scripts with its command
