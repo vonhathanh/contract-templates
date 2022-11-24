@@ -1,6 +1,10 @@
 import { ethers } from "hardhat";
+import { getConfig } from "./config";
 
 async function main() {
+  const config = getConfig("local")
+  console.log("lock addr: ", config.LOCK_ADDRESS, " usdt addr: ", config.USDT_ADDRESS)
+
   const currentTimestampInSeconds = Math.round(Date.now() / 1000);
   const ONE_YEAR_IN_SECS = 365 * 24 * 60 * 60;
   const unlockTime = currentTimestampInSeconds + ONE_YEAR_IN_SECS;
